@@ -1,5 +1,4 @@
 <?php
-date_default_timezone_set('America/Monterrey');
 class SQLConexion{
 	//propiedades
 	public $conexion;
@@ -44,6 +43,7 @@ class SQLConexion{
 		}
 
 		//Tratamiento de logs
+		date_default_timezone_set('America/Monterrey');
 		$fichero = '../php_log.html';
 		$actual = file_get_contents($fichero);
 		$now = DateTime::createFromFormat('U.u', microtime(true));
@@ -59,7 +59,8 @@ class SQLConexion{
 	public function obtenerResultadoSimple($QueryString){
 		$this->conectar();
 			$Resultado=$this->conexion->query($QueryString);
-			//Tratamiento de logs
+		//Tratamiento de logs
+		date_default_timezone_set('America/Monterrey');
 		$fichero = '../php_log.html';
 		$actual = file_get_contents($fichero);
 		$now = DateTime::createFromFormat('U.u', microtime(true));
@@ -80,6 +81,7 @@ class SQLConexion{
 			$i++;
 		}
 		//Tratamiento de logs
+		date_default_timezone_set('America/Monterrey');
 		$fichero = '../php_log.html';
 		$actual = file_get_contents($fichero);
 		$now = DateTime::createFromFormat('U.u', microtime(true));

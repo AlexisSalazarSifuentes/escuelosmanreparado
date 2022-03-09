@@ -15,7 +15,7 @@ $busqueda=$_POST['paterno'];
         </div>
         <div class="col-md-3"><a href="#!" id="btn_buscar_alumno" class="btn btn-secundary">Buscar</a></div>
       </div>
-      <p class="category">Resultados de la Busqueda: "<?php echo $_POST['paterno']; ?>"</p>
+      <p class="category">Resultados de la Busqueda: "<?php echo $busqueda; ?>"</p>
     </div>
     <div class="card-body">
       <div class="table-responsive">
