@@ -4,7 +4,7 @@ $sql = new SQLConexion();
 $id_materia = $_POST['id_materia'];
 $row_materia = $sql->obtenerResultado("CALL sp_select_materia_id('".$id_materia."') ");
 $nombre_materia = $row_materia[0]['nombre_materia'];
-$siglas $row_materia[0]['siglas'];
+$siglas = $row_materia[0]['siglas'];
 $horas = $row_materia[0]['horas'];
 $id_materia = $row_materia[0]['id_materia'];
 
