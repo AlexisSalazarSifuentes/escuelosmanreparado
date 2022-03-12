@@ -17,7 +17,7 @@ $id_materia = $row_materia[0]['id_materia'];
 	      <div class="col-md-4 px-1">
 	        <div class="form-group">
 	          <label>Materia</label>
-	          <input type="text" id="nombre_materia" class="form-control" placeholder="Materia" value="<?php echo $nombre_materia; ?>">
+	          <input type="text" id="nombre_materia" class="form-control" placeholder="Materia" value="<?php      echo htmlspecialchars($nombre_materia,  ENT_QUOTES, 'UTF-8');?>">
 	        </div>
 	      </div>
 	      <div class="col-md-4 pl-1">
