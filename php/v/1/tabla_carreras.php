@@ -26,13 +26,19 @@ $total_row_carreras = count($row_carreras);
             <th>Abrievatura</th>
           </thead>
           <tbody>
-            <?php for ($i=0; $i < $total_row_carreras ; $i++) { ?>
+            <?php for ($i=0; $i < $total_row_carreras ; $i++) { 
+
+              $id_carrera = $row_carreras[$i]['id_carrera'];
+              $nombre = $row_carreras[$i]['nombre'];
+              $abreviatura = $row_carreras[$i]['abreviatura'];
+
+              ?>
             <tr>
-              <td><?php echo $row_carreras[$i]['id_carrera']; ?></td>
-              <td><?php echo $row_carreras[$i]['nombre']; ?></td>
-              <td><?php echo $row_carreras[$i]['abreviatura']; ?></td>
-              <td><a href="#!" id="editar_carrera" data-id="<?php echo $row_carreras[$i]['id_carrera']; ?>" title="">Modificar</a></td>            
-              <td><a href="#!" id="eliminar_carrera" data-id="<?php echo $row_carreras[$i]['id_carrera']; ?>" title="">Eliminar</a></td>
+              <td><?php echo $id_carrera;  ?></td>
+              <td><?php echo $nombre; ?></td>
+              <td><?php echo $abreviatura; ?></td>
+              <td><a href="#!" id="editar_carrera" data-id="<?php echo $id_carrera; ?>" title="">Modificar</a></td>            
+              <td><a href="#!" id="eliminar_carrera" data-id="<?php echo $id_carrera; ?>" title="">Eliminar</a></td>
             <tr>
             <?php } ?>
           </tbody>

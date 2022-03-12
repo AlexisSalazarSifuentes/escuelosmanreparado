@@ -27,14 +27,21 @@ $total_row_grupo = count($row_grupo);
             <th>Carrera</th>
           </thead>
           <tbody>
-            <?php for ($i=0; $i < $total_row_grupo ; $i++) { ?>
+            <?php for ($i=0; $i < $total_row_grupo ; $i++) {
+
+              $id_grupo = $row_grupo[$i]['id_grupo'];
+              $seccion =  $row_grupo[$i]['seccion'];
+              $cuatri = $row_grupo[$i]['cuatri'];
+              $abreviatura = $row_grupo[$i]['abreviatura'];
+
+              ?>
             <tr>
-              <td><?php echo $row_grupo[$i]['id_grupo']; ?></td>
-              <td><?php echo $row_grupo[$i]['seccion']; ?></td>
-              <td><?php echo $row_grupo[$i]['cuatri']; ?></td>
-              <td><?php echo $row_grupo[$i]['abreviatura']; ?></td>
-              <td><a href="#!" id="editar_grupo" data-id="<?php echo $row_grupo[$i]['id_grupo']; ?>" title="">Modificar</a></td>            
-              <td><a href="#!" id="eliminar_grupo" data-id="<?php echo $row_grupo[$i]['id_grupo']; ?>" title="">Eliminar</a></td>
+              <td><?php echo $id_grupo;  ?></td>
+              <td><?php echo $seccion; ?></td>
+              <td><?php echo $cuatri; ?></td>
+              <td><?php echo $abreviatura;  ?></td>
+              <td><a href="#!" id="editar_grupo" data-id="<?php echo $id_grupo; ?>" title="">Modificar</a></td>            
+              <td><a href="#!" id="eliminar_grupo" data-id="<?php echo $id_grupo; ?>" title="">Eliminar</a></td>
             <tr>
             <?php } ?>
           </tbody>

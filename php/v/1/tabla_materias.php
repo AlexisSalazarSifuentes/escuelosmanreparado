@@ -27,14 +27,20 @@ $total_row_materias = count($row_materias);
             <th>Horas(a la semana)</th>
           </thead>
           <tbody>
-            <?php for ($i=0; $i < $total_row_materias ; $i++) { ?>
+            <?php for ($i=0; $i < $total_row_materias ; $i++) {
+                $id_materia = $row_materias[$i]['id_materia'];
+                $nombre_materia = $row_materias[$i]['nombre_materia'];
+                $siglas = $row_materias[$i]['siglas'];
+                $horas = $row_materias[$i]['horas'];
+
+             ?>
             <tr>
-              <td><?php echo $row_materias[$i]['id_materia']; ?></td>
-              <td><?php echo $row_materias[$i]['nombre_materia']; ?></td>
-              <td><?php echo $row_materias[$i]['siglas']; ?></td>
-              <td><?php echo $row_materias[$i]['horas']; ?></td>
-              <td><a href="#" id="editar_materia" data-id="<?php echo $row_materias[$i]['id_materia']; ?>" title="">Modificar</a></td>            
-              <td><a href="#!" id="eliminar_materia" data-id="<?php echo $row_materias[$i]['id_materia']; ?>" title="">Eliminar</a></td>
+              <td><?php echo $id_materia; ?></td>
+              <td><?php echo $nombre_materia; ?></td>
+              <td><?php echo $siglas; ?></td>
+              <td><?php echo $horas; ?></td>
+              <td><a href="#" id="editar_materia" data-id="<?php echo $id_materia; ?>" title="">Modificar</a></td>            
+              <td><a href="#!" id="eliminar_materia" data-id="<?php echo $id_materia; ?>" title="">Eliminar</a></td>
             <tr>
             <?php } ?>
           </tbody>

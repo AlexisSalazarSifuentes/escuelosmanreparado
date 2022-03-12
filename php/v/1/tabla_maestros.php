@@ -35,22 +35,35 @@ $total_row_maestros = count($row_maestros);
             <th>Matricula</th>
           </thead>
           <tbody>
-            <?php for ($i=0; $i < $total_row_maestros ; $i++) { ?>
+            <?php for ($i=0; $i < $total_row_maestros ; $i++) { 
+              $id_maestro = $row_maestros[$i]['id_maestro'];
+              $nombre_maestro = $row_maestros[$i]['nombre_maestro'];
+              $apellido_paterno = $row_maestros[$i]['apellido_paterno'];
+              $apellido_materno = $row_maestros[$i]['apellido_materno'];
+              $grado_academico = $row_maestros[$i]['grado_academico'];
+              $fecha_nacimiento = $row_maestros[$i]['fecha_nacimiento'];
+              $correo = $row_maestros[$i]['correo'];
+              $telefono_celular = $row_maestros[$i]['telefono_celular'];
+              $telefono_casa = $row_maestros[$i]['telefono_casa'];
+              $direccion = $row_maestros[$i]['direccion'];
+              $curp = $row_maestros[$i]['curp'];
+              $matricula =  $row_maestros[$i]['matricula'];
+              ?>
             <tr>
-              <td><?php echo $row_maestros[$i]['id_maestro']; ?></td>
-              <td><?php echo $row_maestros[$i]['nombre_maestro']; ?></td>
-              <td><?php echo $row_maestros[$i]['apellido_paterno']; ?></td>
-              <td><?php echo $row_maestros[$i]['apellido_materno']; ?></td>
-              <td><?php echo $row_maestros[$i]['grado_academico']; ?></td>
-              <td><?php echo $row_maestros[$i]['fecha_nacimiento']; ?></td>
-              <td><?php echo $row_maestros[$i]['correo']; ?></td>
-              <td><?php echo $row_maestros[$i]['telefono_celular']; ?></td>
-              <td><?php echo $row_maestros[$i]['telefono_casa']; ?></td>
-              <td><?php echo $row_maestros[$i]['direccion']; ?></td>
-              <td><?php echo $row_maestros[$i]['curp']; ?></td>
-              <td><?php echo $row_maestros[$i]['matricula']; ?></td>
-              <td><a href="#" id="editar_maestro" data-id="<?php echo $row_maestros[$i]['id_maestro']; ?>" title="">Modificar</a></td>            
-              <td><a href="#!" id="eliminar_maestro" data-id="<?php echo $row_maestros[$i]['id_maestro']; ?>" title="">Eliminar</a></td>
+              <td><?php echo $id_maestro; ?></td>
+              <td><?php echo $nombre_maestro; ?></td>
+              <td><?php echo $apellido_paterno; ?></td>
+              <td><?php echo $apellido_paterno; ?></td>
+              <td><?php echo $grado_academico; ?></td>
+              <td><?php echo $fecha_nacimiento; ?></td>
+              <td><?php echo $correo; ?></td>
+              <td><?php echo $telefono_celular; ?></td>
+              <td><?php echo $telefono_casa; ?></td>
+              <td><?php echo $direccion; ?></td>
+              <td><?php echo $curp; ?></td>
+              <td><?php echo $matricula; ?></td>
+              <td><a href="#" id="editar_maestro" data-id="<?php echo $id_maestro; ?>" title="">Modificar</a></td>            
+              <td><a href="#!" id="eliminar_maestro" data-id="<?php echo $id_maestro; ?>" title="">Eliminar</a></td>
             <tr>
             <?php } ?>
           </tbody>

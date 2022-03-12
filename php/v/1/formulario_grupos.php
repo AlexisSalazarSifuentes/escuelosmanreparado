@@ -29,8 +29,11 @@ $total_row_carreras = count($row_carreras);
 			<label for="carrera">Carrera</label>
 			<select name="carrera" id="carrera" class="form-control">
 				<option selected="disabled">Selecciona una carrera</option>
-			<?php for ($i=0; $i < $total_row_carreras ; $i++) { ?>
-				<option value="<?php echo $row_carreras[$i]['id_carrera']; ?>"><?php echo $row_carreras[$i]['abreviatura']; ?></option>
+			<?php for ($i=0; $i < $total_row_carreras ; $i++) { 
+				$id_carrera = $row_carreras[$i]['id_carrera'];
+				$abreviatura = $row_carreras[$i]['abreviatura'];
+			 ?>
+				<option value="<?php  echo $id_carrera ?>"><?php echo $abreviatura; ?></option>
 			<?php } ?>
 			</select>
 		</div>

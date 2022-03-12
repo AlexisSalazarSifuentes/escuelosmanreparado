@@ -37,24 +37,38 @@ $total_row_alumnos = count($row_alumnos);
             <th>Carrera</th>
           </thead>
           <tbody>
-            <?php for ($i=0; $i < $total_row_alumnos ; $i++) { ?>
+            <?php for ($i=0; $i < $total_row_alumnos ; $i++) {
+
+              $id_alumno = $row_alumnos[$i]['id_alumno'];
+              $nombre = $row_alumnos[$i]['nombre'];
+              $apellido_paterno = $row_alumnos[$i]['apellido_paterno'];
+              $apellido_materno = $row_alumnos[$i]['apellido_materno'];
+              $sexo = $row_alumnos[$i]['sexo'];
+              $fecha_nacimiento = $row_alumnos[$i]['fecha_nacimiento'];
+              $correo = $row_alumnos[$i]['correo'];
+              $telefono_celular = $row_alumnos[$i]['telefono_celular'];
+              $telefono_casa = $row_alumnos[$i]['telefono_casa'];
+              $direccion = $row_alumnos[$i]['direccion'];
+              $curp = $row_alumnos[$i]['curp'];
+              $matricula = $row_alumnos[$i]['matricula'];
+             ?>
             <tr>
-              <td><?php echo $row_alumnos[$i]['id_alumno']; ?></td>
-              <td><?php echo $row_alumnos[$i]['nombre']; ?></td>
-              <td><?php echo $row_alumnos[$i]['apellido_paterno']; ?></td>
-              <td><?php echo $row_alumnos[$i]['apellido_materno']; ?></td>
-              <td><?php echo $row_alumnos[$i]['sexo']; ?></td>
-              <td><?php echo $row_alumnos[$i]['fecha_nacimiento']; ?></td>
-              <td><?php echo $row_alumnos[$i]['correo']; ?></td>
-              <td><?php echo $row_alumnos[$i]['telefono_celular']; ?></td>
-              <td><?php echo $row_alumnos[$i]['telefono_casa']; ?></td>
-              <td><?php echo $row_alumnos[$i]['direccion']; ?></td>
-              <td><?php echo $row_alumnos[$i]['curp']; ?></td>
-              <td><?php echo $row_alumnos[$i]['matricula']; ?></td>
+              <td><?php echo $id_alumno;  ?></td>
+              <td><?php echo $nombre;     ?></td>
+              <td><?php echo  $apellido_paterno; ?></td>
+              <td><?php echo  $apellido_materno; ?></td>
+              <td><?php echo  $sexo; ?></td>
+              <td><?php echo  $fecha_nacimiento ?></td>
+              <td><?php echo  $correo; ?></td>
+              <td><?php echo  $telefono_celular; ?></td>
+              <td><?php echo  $telefono_casa; ?></td>
+              <td><?php echo  $direccion; ?></td>
+              <td><?php echo  $curp; ?></td>
+              <td><?php echo  $matricula; ?></td>
               <td>IDGS</td>
               <td>8°A</td>
-              <td><a href="#" id="editar_alumno" data-id="<?php echo $row_alumnos[$i]['id_alumno']; ?>" title="">Modificar</a></td>            
-              <td><a href="#!" id="eliminar_alumno" data-id="<?php echo $row_alumnos[$i]['id_alumno']; ?>" title="">Eliminar</a></td>
+              <td><a href="#" id="editar_alumno" data-id="<?php echo $id_alumno; ?>" title="">Modificar</a></td>            
+              <td><a href="#!" id="eliminar_alumno" data-id="<?php echo $id_alumno; ?>" title="">Eliminar</a></td>
             <tr>
             <?php } ?>
           </tbody>
