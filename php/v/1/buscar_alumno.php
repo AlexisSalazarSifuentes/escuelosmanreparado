@@ -11,11 +11,11 @@ $busqueda=$_POST['paterno'];
       <h4 class="card-title">Alumnos</h4>
       <div class="row">
         <div class="col-md-9">
-          <input class="form-control" type="search" name="busqueda_alumno" id="busqueda_alumno" placeholder="Busqueda por apellido paterno" value="<?php echo $busqueda; ?>">
+          <input class="form-control" type="search" name="busqueda_alumno" id="busqueda_alumno" placeholder="Busqueda por apellido paterno" value="<?php echo htmlspecialchars($busqueda,  ENT_QUOTES, 'UTF-8') ; ?>">
         </div>
         <div class="col-md-3"><a href="#!" id="btn_buscar_alumno" class="btn btn-secundary">Buscar</a></div>
       </div>
-      <p class="category">Resultados de la Busqueda: "<?php echo $busqueda; ?>"</p>
+      <p class="category">Resultados de la Busqueda: "<?php echo htmlspecialchars($busqueda,  ENT_QUOTES, 'UTF-8') ; ?>"</p>
     </div>
     <div class="card-body">
       <div class="table-responsive">
@@ -52,22 +52,22 @@ $busqueda=$_POST['paterno'];
               $matricula = $row_alumnos[$i]['matricula'];
             ?>
             <tr>
-              <td><?php echo $id_alumno; ?></td>
-              <td><?php echo $nombre; ?></td>
-              <td><?php echo $apellido_paterno; ?></td>
-              <td><?php echo $apellido_materno; ?></td>
-              <td><?php echo $sexo; ?></td>
-              <td><?php echo $fecha_nacimiento; ?></td>
-              <td><?php echo $correo; ?></td>
-              <td><?php echo $telefono_celular; ?></td>
-              <td><?php echo $telefono_casa; ?></td>
-              <td><?php echo $direccion; ?></td>
-              <td><?php echo $curp; ?></td>
-              <td><?php echo $matricula; ?></td>
+              <td><?php echo htmlspecialchars($id_alumno,  ENT_QUOTES, 'UTF-8');?></td>
+              <td><?php echo htmlspecialchars($nombre,  ENT_QUOTES, 'UTF-8');?></td>
+              <td><?php echo htmlspecialchars($apellido_paterno,  ENT_QUOTES, 'UTF-8') ; ?></td>
+              <td><?php echo htmlspecialchars($apellido_materno,  ENT_QUOTES, 'UTF-8'); ?></td>
+              <td><?php echo htmlspecialchars($sexo,  ENT_QUOTES, 'UTF-8'); ?></td>
+              <td><?php echo htmlspecialchars($fecha_nacimiento,  ENT_QUOTES, 'UTF-8') ; ?></td>
+              <td><?php echo htmlspecialchars($correo,  ENT_QUOTES, 'UTF-8'); ?></td>
+              <td><?php echo htmlspecialchars($telefono_celular,  ENT_QUOTES, 'UTF-8') ; ?></td>
+              <td><?php echo htmlspecialchars($telefono_casa,  ENT_QUOTES, 'UTF-8') ; ?></td>
+              <td><?php echo htmlspecialchars($direccion,  ENT_QUOTES, 'UTF-8') ; ?></td>
+              <td><?php echo htmlspecialchars($curp,  ENT_QUOTES, 'UTF-8') ; ?></td>
+              <td><?php echo htmlspecialchars($matricula,  ENT_QUOTES, 'UTF-8') ; ?></td>
               <td>IDGS</td>
               <td>8°A</td>
-              <td><a href="#!" id="editar_alumno" data-id="<?php echo $id_alumno; ?>" title="">Modificar</a></td>
-              <td><a href="#!" id="eliminar_alumno" data-id="<?php echo $id_alumno; ?>" title="">Eliminar</a></td>
+              <td><a href="#!" id="editar_alumno" data-id="<?php echo htmlspecialchars($id_alumno,  ENT_QUOTES, 'UTF-8'); ?>" title="">Modificar</a></td>
+              <td><a href="#!" id="eliminar_alumno" data-id="<?php echo htmlspecialchars($id_alumno,  ENT_QUOTES, 'UTF-8'); ?>" title="">Eliminar</a></td>
             <tr>
             <?php } ?>
           </tbody>
