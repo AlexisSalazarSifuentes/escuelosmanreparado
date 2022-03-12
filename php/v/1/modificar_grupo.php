@@ -22,13 +22,13 @@ $id_grupo = $row_grupo[0]['id_grupo'];
 	      <div class="col-md-4 pl-1">
 		        <div class="form-group">
 		          <label for="abreviatura">Sección</label>
-		          <input type="text" id="seccion" class="form-control" placeholder="Sección" value="<?php echo $seccion; ?>">
+		          <input type="text" id="seccion" class="form-control" placeholder="Sección" value="<?php echo htmlspecialchars($nombre,  ENT_QUOTES, 'UTF-8'); $seccion; ?>">
 		        </div>
       		</div>
 	      <div class="col-md-4 pl-1">
 	        <div class="form-group">
 	          <label for="abreviatura">Cuatrimestre</label>
-	          <input type="number" id="cuatrimestre" class="form-control" placeholder="Cuatrimeste" value="<?php echo $cuatri; ?>">
+	          <input type="number" id="cuatrimestre" class="form-control" placeholder="Cuatrimeste" value="<?php echo htmlspecialchars($cuatri,  ENT_QUOTES, 'UTF-8'); ?>">
 	        </div>
 	      </div>
 	    </div>
@@ -51,7 +51,7 @@ $id_grupo = $row_grupo[0]['id_grupo'];
 			</select>
 		</div>
 	  <div class="card-footer">
-	    <a href="#!" class="btn btn-primary btn-block" id="modificar_grupo" data-id="<?php echo $id_grupo; ?>">Modificar grupo</a>
+	    <a href="#!" class="btn btn-primary btn-block" id="modificar_grupo" data-id="<?php echo htmlspecialchars($id_grupo,  ENT_QUOTES, 'UTF-8');?>">Modificar grupo</a>
 	  </div>
 	</div>
 </div>
