@@ -28,7 +28,7 @@ $id_carrera = $row_carreras[0]['id_carrera'];
 			</div>
 		</div>
 		<div class="card-footer">
-    		<a href="#!" class="btn btn-primary btn-block" id="modificar_carrera" data-id="<?php echo $id_carrera; ?>">Modificar carrera</a>
+    		<a href="#!" class="btn btn-primary btn-block" id="modificar_carrera" data-id="<?php echo htmlspecialchars($id_carrera,  ENT_QUOTES, 'UTF-8'); ; ?>">Modificar carrera</a>
 		</div>
 	</div>
 
